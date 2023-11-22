@@ -10,46 +10,41 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Student {
 	@Id
 	private int id;
-	private String firstname;
-	private String lastname;
-	private String emailId;
-	public Student(int id, String firstname, String lastname, String emailId) {
-		super();
-		this.id = id;
-		this.firstname = firstname;
-		this.lastname = lastname;
-		this.emailId = emailId;
-	}
-	public Student() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+	private String name;
+	private int age;
+	private long salary;
+	
+	
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getFirstname() {
-		return firstname;
+	public String getName() {
+		return name;
 	}
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getLastname() {
-		return lastname;
+	public int getAge() {
+		return age;
 	}
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
+	public void setAge(int age) {
+		this.age = age;
 	}
-	public String getEmailId() {
-		return emailId;
+	public long getSalary() {
+		return salary;
 	}
-	public void setEmailId(String emailId) {
-		this.emailId = emailId;
+	public void setSalary(long salary) {
+		this.salary = salary;
 	}
-
- 
-}	
-
-
+	public Student(int id, String name, int age, long salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.age = age;
+		this.salary = salary;
+	}
+	
+}
