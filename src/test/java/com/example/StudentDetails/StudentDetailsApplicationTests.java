@@ -20,7 +20,8 @@ class StudentDetailsApplicationTests {
 
         Student savedStudent = studentService.saveStudent(student);
 
-        assertNotNull(savedStudent.getId());        assertEquals("John Doe", savedStudent.getName());
+        assertNotNull(savedStudent.getId());        
+        assertEquals("John Doe", savedStudent.getName());
         assertEquals(25, savedStudent.getAge());
         assertEquals(50000.0, savedStudent.getSalary());
 
